@@ -21,18 +21,18 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "GitLab::API::v3",
   "PREREQ_PM" => {
+    "Const::Fast" => 0,
     "Moo" => "1.006000",
     "Role::REST::Client" => "0.18",
     "Type::Tiny" => 1,
-    "Types::Git" => "0.02",
-    "Types::GitLab" => "0.03",
+    "URI::Escape" => 0,
     "namespace::clean" => 0,
     "strictures" => 0
   },
   "TEST_REQUIRES" => {
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -40,12 +40,12 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Const::Fast" => 0,
   "Moo" => "1.006000",
   "Role::REST::Client" => "0.18",
   "Test::Simple" => "0.94",
   "Type::Tiny" => 1,
-  "Types::Git" => "0.02",
-  "Types::GitLab" => "0.03",
+  "URI::Escape" => 0,
   "namespace::clean" => 0,
   "strictures" => 0
 );

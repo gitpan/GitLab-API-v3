@@ -14,15 +14,15 @@ meta-spec:
   version: '1.4'
 name: GitLab-API-v3
 requires:
+  Const::Fast: '0'
   Moo: '1.006000'
   Role::REST::Client: '0.18'
   Type::Tiny: '1'
-  Types::Git: '0.02'
-  Types::GitLab: '0.03'
+  URI::Escape: '0'
   namespace::clean: '0'
   strictures: '0'
 resources:
   bugtracker: https://github.com/bluefeet/GitLab-API-v3/issues
   homepage: https://github.com/bluefeet/GitLab-API-v3
   repository: https://github.com/bluefeet/GitLab-API-v3.git
-version: '0.01'
+version: '0.02'

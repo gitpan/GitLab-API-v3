@@ -6,6 +6,7 @@ META.yml
 Makefile.PL
 README
 lib/GitLab/API/v3.pm
+lib/GitLab/API/v3/Constants.pm
 lib/GitLab/API/v3/RESTClient.pm
 t/branches.t
 t/release-pod-syntax.t
