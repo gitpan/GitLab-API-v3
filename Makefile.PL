@@ -22,6 +22,7 @@ my %WriteMakefileArgs = (
   "NAME" => "GitLab::API::v3",
   "PREREQ_PM" => {
     "Const::Fast" => 0,
+    "Log::Any" => "0.11",
     "Moo" => "1.006000",
     "Role::REST::Client" => "0.18",
     "Type::Tiny" => 1,
@@ -30,9 +31,10 @@ my %WriteMakefileArgs = (
     "strictures" => 0
   },
   "TEST_REQUIRES" => {
+    "Log::Any::Adapter::TAP" => "v0.2.0",
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -41,6 +43,8 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Const::Fast" => 0,
+  "Log::Any" => "0.11",
+  "Log::Any::Adapter::TAP" => "v0.2.0",
   "Moo" => "1.006000",
   "Role::REST::Client" => "0.18",
   "Test::Simple" => "0.94",

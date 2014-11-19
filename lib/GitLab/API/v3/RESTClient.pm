@@ -1,5 +1,5 @@
 package GitLab::API::v3::RESTClient;
-$GitLab::API::v3::RESTClient::VERSION = '0.02';
+$GitLab::API::v3::RESTClient::VERSION = '0.03';
 =head1 NAME
 
 GitLab::API::v3::RESTClient - GitLab API v3 REST client.
