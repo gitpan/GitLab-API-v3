@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     "Log::Any::Adapter::TAP" => "v0.2.0",
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }

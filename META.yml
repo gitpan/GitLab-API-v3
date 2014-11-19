@@ -27,4 +27,4 @@ resources:
   bugtracker: https://github.com/bluefeet/GitLab-API-v3/issues
   homepage: https://github.com/bluefeet/GitLab-API-v3
   repository: https://github.com/bluefeet/GitLab-API-v3.git
-version: '0.04'
+version: '0.05'
