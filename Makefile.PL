@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "GitLab API v3 client.",
+  "ABSTRACT" => "A complete GitLab API v3 client.",
   "AUTHOR" => "Aran Deltac <bluefeet\@gmail.com>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     "Log::Any::Adapter::TAP" => "v0.2.0",
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
