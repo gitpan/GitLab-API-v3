@@ -5,6 +5,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+bin/gitlab-api-v3
 lib/GitLab/API/v3.pm
 lib/GitLab/API/v3/Constants.pm
 lib/GitLab/API/v3/Paginator.pm

@@ -17,16 +17,26 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "GitLab-API-v3",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/gitlab-api-v3",
+    "bin/gitlab-api-v3"
+  ],
   "LICENSE" => "perl",
   "NAME" => "GitLab::API::v3",
   "PREREQ_PM" => {
     "Const::Fast" => 0,
+    "Data::Serializer" => 0,
+    "Gitopt::Long" => 0,
     "Log::Any" => "0.11",
+    "Log::Any::Adapter" => 0,
+    "Log::Any::Adapter::ScreenColoredLevel" => 0,
     "Moo" => "1.006000",
+    "Pod::Usage" => 0,
     "Role::REST::Client" => "0.18",
+    "Try::Tiny" => 0,
     "Type::Tiny" => 1,
     "URI::Escape" => 0,
+    "YAML" => 0,
     "namespace::clean" => 0,
     "strictures" => 0
   },
@@ -34,7 +44,7 @@ my %WriteMakefileArgs = (
     "Log::Any::Adapter::TAP" => "v0.2.0",
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -43,13 +53,20 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Const::Fast" => 0,
+  "Data::Serializer" => 0,
+  "Gitopt::Long" => 0,
   "Log::Any" => "0.11",
+  "Log::Any::Adapter" => 0,
+  "Log::Any::Adapter::ScreenColoredLevel" => 0,
   "Log::Any::Adapter::TAP" => "v0.2.0",
   "Moo" => "1.006000",
+  "Pod::Usage" => 0,
   "Role::REST::Client" => "0.18",
   "Test::Simple" => "0.94",
+  "Try::Tiny" => 0,
   "Type::Tiny" => 1,
   "URI::Escape" => 0,
+  "YAML" => 0,
   "namespace::clean" => 0,
   "strictures" => 0
 );

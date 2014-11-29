@@ -1,5 +1,5 @@
 package GitLab::API::v3;
-$GitLab::API::v3::VERSION = '0.05';
+$GitLab::API::v3::VERSION = '0.06';
 =head1 NAME
 
 GitLab::API::v3 - A complete GitLab API v3 client.
@@ -20,6 +20,9 @@ GitLab::API::v3 - A complete GitLab API v3 client.
 This module provides a one-to-one interface with the GitLab
 API v3.  Much is not documented here as it would just be duplicating
 GitLab's own L<API Documentation|http://doc.gitlab.com/ce/api/README.html>.
+
+Note that this distribution also includes the L<gitlab-api-v3> command-line
+interface (CLI),
 
 =head2 CONSTANTS
 
@@ -151,12 +154,23 @@ sub _build_rest_client {
 
 =head2 paginator
 
-  my $paginator = $api->paginator( $method, @method_args );
-
-  my $member_pager = $api->paginator('group_members', $group_id);
-  while (my $member = $member_pager->next()) {
-    ...
-  }
+    my $paginator = $api->paginator( $method, @method_args );
+    
+    my $members = $api->paginator('group_members', $group_id);
+    while (my $member = $members->next()) {
+        ...
+    }
+    
+    my $users_pager = $api->paginator('users');
+    while (my $users = $users_pager->next_page()) {
+        ...
+    }
+    
+    my $all_open_issues = $api->paginator(
+        'issues',
+        $project_id,
+        { state=>'opened' },
+    )->all();
 
 Given a method who supports the C<page> and C<per_page> parameters,
 and returns an array ref, this will return a L<GitLab::API::v3::Paginator>
@@ -166,16 +180,16 @@ at a time.
 =cut
 
 sub paginator {
-  my ($self, $method, @args) = @_;
+    my ($self, $method, @args) = @_;
 
-  my $params = (ref($args[-1]) eq 'HASH') ? pop(@args) : {};
+    my $params = (ref($args[-1]) eq 'HASH') ? pop(@args) : {};
 
-  return GitLab::API::v3::Paginator->new(
-    api    => $self,
-    method => $method,
-    args   => \@args,
-    params => $params,
-  );
+    return GitLab::API::v3::Paginator->new(
+        api    => $self,
+        method => $method,
+        args   => \@args,
+        params => $params,
+    );
 }
 
 =head1 USER METHODS
@@ -562,11 +576,11 @@ sub project_events {
 
 =head2 create_project
 
-    $api->create_project(
+    my $project = $api->create_project(
         \%params,
     );
 
-Sends a C<POST> request to C</projects>.
+Sends a C<POST> request to C</projects> and returns the decoded/deserialized response body.
 
 =cut
 
@@ -577,8 +591,7 @@ sub create_project {
     my $params = pop;
     my $path = sprintf('/projects', (map { uri_escape($_) } @_));
     $log->infof( 'Making %s request against %s with params %s.', 'POST', $path, $params );
-    $self->post( $path, ( defined($params) ? $params : () ) );
-    return;
+    return $self->post( $path, ( defined($params) ? $params : () ) );
 }
 
 =head2 create_project_for_user
@@ -2533,7 +2546,7 @@ L<open a ticket|https://github.com/bluefeet/GitLab-API-v3/issues>.
 
 =head1 AUTHOR
 
-Aran Clary Deltac <bluefeet@gmail.com>
+Aran Clary Deltac <bluefeetE<64>gmail.com>
 
 =head1 ACKNOWLEDGEMENTS
 

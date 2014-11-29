@@ -16,15 +16,22 @@ meta-spec:
 name: GitLab-API-v3
 requires:
   Const::Fast: '0'
+  Data::Serializer: '0'
+  Gitopt::Long: '0'
   Log::Any: '0.11'
+  Log::Any::Adapter: '0'
+  Log::Any::Adapter::ScreenColoredLevel: '0'
   Moo: '1.006000'
+  Pod::Usage: '0'
   Role::REST::Client: '0.18'
+  Try::Tiny: '0'
   Type::Tiny: '1'
   URI::Escape: '0'
+  YAML: '0'
   namespace::clean: '0'
   strictures: '0'
 resources:
   bugtracker: https://github.com/bluefeet/GitLab-API-v3/issues
   homepage: https://github.com/bluefeet/GitLab-API-v3
   repository: https://github.com/bluefeet/GitLab-API-v3.git
-version: '0.05'
+version: '0.06'
