@@ -17,7 +17,7 @@ name: GitLab-API-v3
 requires:
   Const::Fast: '0'
   Data::Serializer: '0'
-  Gitopt::Long: '0'
+  Getopt::Long: '0'
   Log::Any: '0.11'
   Log::Any::Adapter: '0'
   Log::Any::Adapter::ScreenColoredLevel: '0'
@@ -34,4 +34,4 @@ resources:
   bugtracker: https://github.com/bluefeet/GitLab-API-v3/issues
   homepage: https://github.com/bluefeet/GitLab-API-v3
   repository: https://github.com/bluefeet/GitLab-API-v3.git
-version: '0.06'
+version: '0.07'

@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Const::Fast" => 0,
     "Data::Serializer" => 0,
-    "Gitopt::Long" => 0,
+    "Getopt::Long" => 0,
     "Log::Any" => "0.11",
     "Log::Any::Adapter" => 0,
     "Log::Any::Adapter::ScreenColoredLevel" => 0,
@@ -44,7 +44,7 @@ my %WriteMakefileArgs = (
     "Log::Any::Adapter::TAP" => "v0.2.0",
     "Test::Simple" => "0.94"
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -54,7 +54,7 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Const::Fast" => 0,
   "Data::Serializer" => 0,
-  "Gitopt::Long" => 0,
+  "Getopt::Long" => 0,
   "Log::Any" => "0.11",
   "Log::Any::Adapter" => 0,
   "Log::Any::Adapter::ScreenColoredLevel" => 0,

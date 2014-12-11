@@ -1,5 +1,5 @@
 package GitLab::API::v3::Paginator;
-$GitLab::API::v3::Paginator::VERSION = '0.06';
+$GitLab::API::v3::Paginator::VERSION = '0.07';
 =head1 NAME
 
 GitLab::API::v3::Paginator - Iterate through paginated GitLab v3 API records.
@@ -24,7 +24,7 @@ use namespace::clean;
 
 =head2 method
 
-The name of the method subroutine to all on the L</api> object
+The name of the method subroutine to call on the L</api> object
 to get records from.
 
 This method must accept a hash ref of parameters as the last

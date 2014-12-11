@@ -1,5 +1,5 @@
 package GitLab::API::v3;
-$GitLab::API::v3::VERSION = '0.06';
+$GitLab::API::v3::VERSION = '0.07';
 =head1 NAME
 
 GitLab::API::v3 - A complete GitLab API v3 client.
@@ -2524,7 +2524,7 @@ __END__
 
 =head1 SEE ALSO
 
-L<Net::GitLab> purports to provide an interface to the GitLab API, but
+L<Net::Gitlab> purports to provide an interface to the GitLab API, but
 it is hard to tell due to a complete lack of documentation via either
 POD or unit tests.
 
@@ -2547,6 +2547,16 @@ L<open a ticket|https://github.com/bluefeet/GitLab-API-v3/issues>.
 =head1 AUTHOR
 
 Aran Clary Deltac <bluefeetE<64>gmail.com>
+
+=head2 CONTRIBUTORS
+
+=over
+
+=item *
+
+L<dotandimet|https://github.com/dotandimet>
+
+=back
 
 =head1 ACKNOWLEDGEMENTS
 

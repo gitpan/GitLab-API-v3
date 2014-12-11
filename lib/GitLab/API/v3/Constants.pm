@@ -1,5 +1,5 @@
 package GitLab::API::v3::Constants;
-$GitLab::API::v3::Constants::VERSION = '0.06';
+$GitLab::API::v3::Constants::VERSION = '0.07';
 =head1 NAME
 
 GitLab::API::v3::Constants - GitLab API v3 constants.
@@ -8,7 +8,7 @@ GitLab::API::v3::Constants - GitLab API v3 constants.
 
     use GitLab::API::v3::Constants qw( :all );
     
-    print $GITLAB_INTERNAL_VISIBILITY_LEVEL # 10
+    print $GITLAB_INTERNAL_VISIBILITY_LEVEL; # 10
 
 =cut
 
